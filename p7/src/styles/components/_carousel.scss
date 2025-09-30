@@ -1,0 +1,73 @@
+// carousel.scss
+@use "../abstracts/variables" as v;
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: v.$radius-lg;
+    overflow: hidden;
+    --carousel-h: 225px;
+}
+
+@media (min-width: #{v.$bp-md}) {
+    .carousel {
+        --carousel-h: 415px;
+    }
+}
+
+.carousel__img {
+    width: 100%;
+    height: var(--carousel-h);
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.carousel__btn--prev {
+    left: .5rem;
+}
+
+.carousel__btn--next {
+    right: .5rem;
+}
+
+.carousel__icon {
+    width: 18px;
+    height: 18px;
+}
+
+.carousel__btn--prev .carousel__icon {
+    transform: rotate(-90deg);
+}
+
+.carousel__btn--next .carousel__icon {
+    transform: rotate(90deg);
+}
+
+.carousel__counter {
+    position: absolute;
+    left: 50%;
+    bottom: .75rem;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    padding: .15rem .6rem;
+    border-radius: 8px;
+    font-size: .9rem;
+    font-weight: 600;
+}

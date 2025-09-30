@@ -1,0 +1,8 @@
+// layout.scss
+@use "../abstracts/variables" as v;
+
+
+.container {
+    width: min(v.$container-max, 100% - 2rem);
+    margin-inline: auto;
+}

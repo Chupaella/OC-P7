@@ -1,0 +1,22 @@
+// main.scss
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "base/reset";
+@use "base/typography";
+
+@use "layout/container";
+@use "layout/header";
+@use "layout/footer";
+
+@use "components/banner";
+@use "components/card";
+@use "components/rating";
+@use "components/tags";
+@use "components/carousel";
+@use "components/collapse";
+
+@use "pages/home";
+@use "pages/logement";
+@use "pages/about";
+@use "pages/notfound";

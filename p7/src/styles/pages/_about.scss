@@ -1,0 +1,11 @@
+// about.scss
+@use "../abstracts/variables" as v;
+
+.about {
+    padding: 2rem 0;
+}
+
+.about__list {
+    display: grid;
+    gap: 1rem;
+}

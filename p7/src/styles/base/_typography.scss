@@ -1,0 +1,114 @@
+// typography.scss
+
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.nav__link {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.banner__title {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include m.up(md) {
+        font-size: 48px;
+    }
+}
+
+.card__title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logement__title {
+    font-size: 18px;
+    font-weight: 500;
+
+    @include m.up(md) {
+        font-size: 36px;
+    }
+}
+
+.logement__location {
+    font-size: 14px;
+    font-weight: 500;
+
+    @include m.up(md) {
+        font-size: 18px;
+    }
+}
+
+.tag {
+    font-size: 10px;
+    font-weight: 700;
+
+    @include m.up(md) {
+        font-size: 14px;
+    }
+}
+
+.host__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+
+    @include m.up(md) {
+        font-size: 18px;
+    }
+}
+
+.rating__star {
+    font-weight: 400;
+    font-size: 13.4px;
+
+    @include m.up(md) {
+        font-size: 24.75px;
+    }
+
+    @include m.up(lg) {
+        font-size: 36px;
+    }
+}
+
+.collapse__toggle {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.carousel__counter {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.notfound__code {
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.notfound__msg {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.notfound__back {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about .collapse__toggle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer__legal {
+    font-size: 24px;
+    font-weight: 500;
+}

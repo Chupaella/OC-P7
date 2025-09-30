@@ -1,0 +1,43 @@
+// banner.scss
+@use "../abstracts/variables" as v;
+
+.banner {
+    --banner-h: 111px;
+
+    @media (min-width: v.$bp-md) {
+        --banner-h: 223px;
+    }
+
+    position: relative;
+    border-radius: v.$radius-lg;
+    overflow: hidden;
+    margin: 1rem 0 2rem;
+
+    &__img {
+        width: 100%;
+        height: var(--banner-h);
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        filter: brightness(.85);
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .25);
+        box-shadow: inset 0 2px 8px rgba(0, 0, 0, .25);
+    }
+
+    &__title {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 1rem;
+        font-size: clamp(1.25rem, 3vw, 2.25rem);
+    }
+}

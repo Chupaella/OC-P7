@@ -1,0 +1,59 @@
+// home.scss
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.home {
+    padding: 2rem 0;
+}
+
+.home {
+    --card-h: 255px;
+}
+
+@include m.up(lg) {
+    .home {
+        --card-h: 340px;
+    }
+}
+
+.home__panel {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+@include m.up(md) {
+    .home__panel {
+        background: #f7f7f7;
+        border-radius: 16px;
+        padding: 24px;
+    }
+}
+
+.home__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@include m.up(md) {
+    .home__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@include m.up(lg) {
+    .home__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+.home__link {
+    display: block;
+}
+
+.card {
+    width: 100%;
+}

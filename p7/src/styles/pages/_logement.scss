@@ -1,0 +1,110 @@
+// logement.scss
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.logement {
+    padding: 1rem 0 2.5rem;
+}
+
+.logement__header {
+    display: grid;
+    gap: 1rem;
+    margin: .75rem 0 1.25rem;
+
+    @include m.up(md) {
+        grid-template-columns: 1fr auto;
+        align-items: start;
+    }
+}
+
+.logement__title {
+    margin: .25rem 0;
+    font-weight: 700;
+    color: v.$color-primary;
+    font-size: clamp(1.25rem, 2.6vw, 2rem);
+}
+
+.logement__location {
+    margin: .25rem 0 .5rem;
+    color: v.$color-muted;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.tag {
+    background: v.$color-primary;
+    color: #fff;
+    border-radius: 999px;
+    padding: .25rem .75rem;
+    font-weight: 600;
+    font-size: .85rem;
+}
+
+.logement__side {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "rating host";
+    align-items: center;
+    gap: .5rem;
+    margin-top: .25rem;
+
+    @include m.up(md) {
+        grid-template-columns: unset;
+        grid-template-areas:
+            "host"
+            "rating";
+        justify-items: end;
+        gap: .5rem;
+    }
+}
+
+.rating {
+    grid-area: rating;
+}
+
+.host {
+    grid-area: host;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.host__name {
+    text-align: right;
+    line-height: 1.1;
+}
+
+.host__pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include m.up(md) {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.rating__star {
+    font-size: 1.25rem;
+    color: #e3e3e3;
+    vertical-align: middle;
+}
+
+.rating__star.is-filled {
+    color: v.$color-primary;
+}
+
+.logement__content {
+    display: grid;
+    gap: 1rem;
+
+    @include m.up(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+}

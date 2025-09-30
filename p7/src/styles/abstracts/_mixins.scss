@@ -1,0 +1,9 @@
+// _mixins.scss
+@use "./variables" as v;
+
+
+@mixin up($bp) {
+  @if $bp == sm { @media (min-width: v.$bp-sm) { @content; } }
+  @else if $bp == md { @media (min-width: v.$bp-md) { @content; } }
+  @else if $bp == lg { @media (min-width: v.$bp-lg) { @content; } }
+}

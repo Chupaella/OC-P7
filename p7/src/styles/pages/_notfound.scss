@@ -1,0 +1,26 @@
+// notfound.scss
+@use "../abstracts/variables" as v;
+
+
+.notfound {
+    text-align: center;
+    padding: 3rem 0 5rem;
+}
+
+.notfound__code {
+    color: v.$color-primary;
+    font-size: clamp(4rem, 20vw, 10rem);
+    line-height: 1;
+    margin: 0;
+}
+
+.notfound__msg {
+    margin: 1rem 0 2rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: v.$color-muted;
+}
+
+.notfound__back {
+    color: v.$color-text;
+    text-decoration: underline;
+}
